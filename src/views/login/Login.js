@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react';
-import { Button, View } from 'react-native';
+import { Button, View, StatusBar } from 'react-native';
+
+import { IS_ANDROID } from './../../utilities/Defaults';
 
 class Login extends Component {
 
@@ -10,8 +12,10 @@ class Login extends Component {
 
     render() {
         const { navigation } = this.props;
+        const statusBarStyle = IS_ANDROID ? 'light-content' : 'dark-content';
         return (
             <View>
+                <StatusBar barStyle='dark-content' translucent={false} />
                 <Button
                     title='Login'
                     onPress={() => navigation.navigate('mainTab')}

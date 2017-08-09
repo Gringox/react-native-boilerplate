@@ -1,6 +1,10 @@
 
+import _ from 'lodash';
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Button, StatusBar } from 'react-native';
+
+import { PUSH } from './../../router/actions';
+import { BELLBANK_DARK_COLOR } from './../../utilities/Defaults';
 
 class View1 extends Component {
 
@@ -11,7 +15,15 @@ class View1 extends Component {
     render() {
         return (
             <View>
+                
                 <Text>View1</Text>
+                <Button
+                    title='Go to View 1 Detail'
+                    onPress={_.debounce(() => this.props.navigation.dispatch({
+                        type: PUSH,
+                        routeName: 'view1Detail'
+                    }), 100)}
+                />
             </View>
         );
     }
