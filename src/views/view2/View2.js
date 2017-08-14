@@ -3,6 +3,8 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
+import TabNavigatorShadow from './../../components/TabNavigatorShadow/TabNavigatorShadow';
+
 class View2 extends Component {
 
     static navigationOptions = {
@@ -12,6 +14,7 @@ class View2 extends Component {
     render() {
         return (
             <View>
+                <TabNavigatorShadow />
                 <Text>View2</Text>
             </View>
         );

@@ -8,7 +8,9 @@ import BackButtoniOS from './../../../components/BackButtoniOS/BackButtoniOS';
 
 class View1Detail extends Component {
 
-    static navigationOptions = () => {
+    static navigationOptions = ({ navigation }) => {
+        const { dispatch } = navigation;
+
         const options = {
             title: 'View1Detail'
         };
@@ -16,7 +18,7 @@ class View1Detail extends Component {
         if (!IS_ANDROID) {
             return {
                 ...options,
-                headerLeft: <BackButtoniOS />
+                headerLeft: <BackButtoniOS onPress={() => dispatch({ type: POP })} />
             };
         }
 

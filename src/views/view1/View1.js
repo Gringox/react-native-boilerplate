@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Text, View, Button, StatusBar } from 'react-native';
 
 import { PUSH } from './../../router/actions';
-import { BELLBANK_DARK_COLOR } from './../../utilities/Defaults';
+import TabNavigatorShadow from './../../components/TabNavigatorShadow/TabNavigatorShadow';
 
 class View1 extends Component {
 
@@ -15,7 +15,8 @@ class View1 extends Component {
     render() {
         return (
             <View>
-                
+                <StatusBar barStyle='light-content' />
+                <TabNavigatorShadow />
                 <Text>View1</Text>
                 <Button
                     title='Go to View 1 Detail'

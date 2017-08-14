@@ -45,7 +45,7 @@ const MainStackNavigator = StackNavigator({
         headerStyle: {
             backgroundColor: BELLBANK_COLOR,
             elevation: 0,
-            paddingTop: IS_ANDROID ? StatusBar.currentHeight + 12 : 0
+            //paddingTop: IS_ANDROID ? StatusBar.currentHeight : 15
         },
         headerTintColor: 'white' 
     }

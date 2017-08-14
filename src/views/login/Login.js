@@ -15,7 +15,7 @@ class Login extends Component {
         const statusBarStyle = IS_ANDROID ? 'light-content' : 'dark-content';
         return (
             <View>
-                <StatusBar barStyle='dark-content' translucent={false} />
+                <StatusBar barStyle={statusBarStyle} />
                 <Button
                     title='Login'
                     onPress={() => navigation.navigate('mainTab')}

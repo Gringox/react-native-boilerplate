@@ -1,17 +1,17 @@
 
 import React from 'react';
-import { Text, View, TouchableHighlight } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
-export default () =>
-    <TouchableHighlight>
+export default ({ onPress }) =>
+    <TouchableOpacity onPress={onPress}>
         <View style={styles.containerStyle}>
                 <FontAwesome name='angle-left' size={40} color='white' />
                 <Text style={styles.textStyle}>
                     Back
                 </Text>
         </View>
-    </TouchableHighlight>
+    </TouchableOpacity>
 ;
 
 const styles = {
